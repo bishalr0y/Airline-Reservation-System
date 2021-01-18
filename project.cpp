@@ -10,7 +10,7 @@ class Air {
     
     void reserve_ticket() {
 cin.ignore();
-        cout<<"\nEnter your name: ";
+        cout<<"\nEnter your Name: ";
         getline(cin, name);
         cout<<"\nEnter your DOB (dd/mm/yyyy): ";
         getline(cin, dob);
@@ -18,9 +18,9 @@ cin.ignore();
         getline(cin, phone);
         cout<<"\nEnter your address: ";
         getline(cin, address);
-        cout<<"\nEnter your destination: ";
+        cout<<"\nEnter your Destination: ";
         getline(cin, dest);
-        cout<<"\nEnter your departure: ";
+        cout<<"\nEnter your Departure: ";
         getline(cin, dept);
     }
     void display() {
@@ -42,14 +42,31 @@ cin.ignore();
 
 } t1[20];
 void print_banner() {
-    cout<<R"(            _         _______  _        _          _     _____                                      _    _               )"<<endl;
-    cout<<R"(     /\    (_)       |__   __|(_)      | |        | |   |  __ \                                    | |  (_)              )"<<endl;
-    cout<<R"(    /  \    _  _ __     | |    _   ___ | | __ ___ | |_  | |__) | ___  ___   ___  _ __ __   __ __ _ | |_  _   ___   _ __  )"<<endl;
-    cout<<R"(   / /\ \  | || '__|    | |   | | / __|| |/ // _ \| __| |  _  / / _ \/ __| / _ \| '__|\ \ / // _` || __|| | / _ \ | '_ \ )"<<endl;
-    cout<<R"(  / ____ \ | || |       | |   | || (__ |   <|  __/| |_  | | \ \|  __/\__ \|  __/| |    \ V /| (_| || |_ | || (_) || | | |)"<<endl;
-    cout<<R"( /_/    \_\|_||_|       |_|   |_| \___||_|\_\\___| \__| |_|  \_\\___||___/ \___||_|     \_/  \__,_| \__||_| \___/ |_| |_|)"<<endl;
+    cout<<R"(                                                                |                                                         )"<<endl;
+    cout<<R"(                                                      --====|====--                                                       )"<<endl;
+    cout<<R"(                                                            |                                                             )"<<endl;
+    cout<<R"(                                                                                                                          )"<<endl;
+    cout<<R"(                                                        .-"""""-.                                                         )"<<endl;
+    cout<<R"(                                                      .'_________'.                                                       )"<<endl;
+    cout<<R"(                                                     /_/_|__|__|_\_\                                                      )"<<endl;
+    cout<<R"(                                                    ;'-._       _.-';                                                     )"<<endl;
+    cout<<R"(                               ,--------------------|    `-. .-'    |--------------------,                                )"<<endl;
+    cout<<R"(                                ``""--..__    ___   ;       '       ;   ___    __..--""``                                 )"<<endl;
+    cout<<R"(                                          `"-// \\.._\             /_..// \\-"`                                           )"<<endl;
+    cout<<R"(                                             \\_//    '._       _.'    \\_//                                              )"<<endl;
+    cout<<R"(                                              `"`        ``---``        `"`                                               )"<<endl;
+    cout<<R"(            _         _______  _        _          _      _____                                      _    _               )"<<endl;
+    cout<<R"(     /\    (_)       |__   __|(_)      | |        | |     |  __ \                                    | |  (_)              )"<<endl;
+    cout<<R"(    /  \    _  _ __     | |    _   ___ | | __ ___ | |_    | |__) | ___  ___   ___  _ __ __   __ __ _ | |_  _   ___   _ __  )"<<endl;
+    cout<<R"(   / /\ \  | || '__|    | |   | | / __|| |/ // _ \| __|   |  _  / / _ \/ __| / _ \| '__|\ \ / // _` || __|| | / _ \ | '_ \ )"<<endl;
+    cout<<R"(  / ____ \ | || |       | |   | || (__ |   <|  __/| |_    | | \ \|  __/\__ \|  __/| |    \ V /| (_| || |_ | || (_) || | | |)"<<endl;
+    cout<<R"( /_/    \_\|_||_|       |_|   |_| \___||_|\_\\___| \__|   |_|  \_\\___||___/ \___||_|     \_/  \__,_| \__||_| \___/ |_| |_|)"<<endl;
     cout<<endl;
-    cout<<"                                                    Group members: Bishal Roy, Kulendu K. Chakroborty, Kamalakshi Kapinjal";
+    cout<<R"(---------------------------------------------------------------------------------------------------------------------------)"<<endl;
+    cout<<"                            Group members: Bishal Roy, Kulendu K. Chakraborty, Kamalakshi Kapinjal";
+    cout<<endl;
+    cout<<R"(---------------------------------------------------------------------------------------------------------------------------)"<<endl;
+
 }
 
 
@@ -82,6 +99,8 @@ counter++;
            break;
     case 4:exit(0);
     defalt:cout<<"\nWrong Choice";
+
+    
  }
 }
 }
