@@ -63,7 +63,7 @@ void print_banner() {
     cout<<R"( /_/    \_\|_||_|       |_|   |_| \___||_|\_\\___| \__|   |_|  \_\\___||___/ \___||_|     \_/  \__,_| \__||_| \___/ |_| |_|)"<<endl;
     cout<<endl;
     cout<<R"(---------------------------------------------------------------------------------------------------------------------------)"<<endl;
-    cout<<"                            Group members: Bishal Roy, Kulendu K. Chakraborty, Kamalakshi Kapinjal";
+    cout<<"                           Group members --> Bishal Roy, Kulendu K. Chakraborty, Kamalakshi Kapinjal";
     cout<<endl;
     cout<<R"(---------------------------------------------------------------------------------------------------------------------------)"<<endl;
 
@@ -75,8 +75,11 @@ int main() {
     int counter = 0,choice;
     print_banner();
     while(1){
-    cout<<"\n\n\n\tMENU";
-    cout<<"\n1.Reservation\n2.Cancellation\n3.Show all tickets\n4.Exit"<<endl;
+    // cout<<"\n\n\n\tMENU";
+    cout<<R"(   \\\\\\\\\\\\\\\\\\\)"<<endl;
+    cout<<R"(            MENU        )"<<endl;
+    cout<<R"(    \\\\\\\\\\\\\\\\\\\)"<<endl;
+    cout<<"\n   1. Reservation\n   2. Cancellation\n   3. Show all tickets\n   4. Exit"<<endl;
     cin>>choice;
     switch(choice){
     case 1:t1[counter].reserve_ticket();
