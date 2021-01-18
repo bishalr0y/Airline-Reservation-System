@@ -24,7 +24,7 @@ cin.ignore();
         getline(cin, dept);
     }
     void display() {
-        cout<<"\n\nYour ticket details: "<<endl;
+        cout<<endl;
         cout<<"------------------------------------"<<endl;
         cout<<"Name: "<<name<<endl;
         cout<<"DOB: "<<dob<<endl;
@@ -32,7 +32,7 @@ cin.ignore();
         cout<<"Departure: "<<dept<<endl;
         cout<<"Destination: "<<dest<<endl;
         cout<<"Status: "<<status<<endl;
-        cout<<"------------------------------------"<<endl;
+        cout<<"------------------------------------"<<endl<<endl;
     }
     void cancel_ticket() {
         
@@ -42,7 +42,7 @@ cin.ignore();
 
 } t1[20];
 void print_banner() {
-    cout<<R"(                                                                |                                                         )"<<endl;
+    cout<<R"(                                                            |                                                         )"<<endl;
     cout<<R"(                                                      --====|====--                                                       )"<<endl;
     cout<<R"(                                                            |                                                             )"<<endl;
     cout<<R"(                                                                                                                          )"<<endl;
@@ -55,7 +55,7 @@ void print_banner() {
     cout<<R"(                                          `"-// \\.._\             /_..// \\-"`                                           )"<<endl;
     cout<<R"(                                             \\_//    '._       _.'    \\_//                                              )"<<endl;
     cout<<R"(                                              `"`        ``---``        `"`                                               )"<<endl;
-    cout<<R"(            _         _______  _        _          _      _____                                      _    _               )"<<endl;
+    cout<<R"(            _         _______  _        _          _      _____                                       _    _               )"<<endl;
     cout<<R"(     /\    (_)       |__   __|(_)      | |        | |     |  __ \                                    | |  (_)              )"<<endl;
     cout<<R"(    /  \    _  _ __     | |    _   ___ | | __ ___ | |_    | |__) | ___  ___   ___  _ __ __   __ __ _ | |_  _   ___   _ __  )"<<endl;
     cout<<R"(   / /\ \  | || '__|    | |   | | / __|| |/ // _ \| __|   |  _  / / _ \/ __| / _ \| '__|\ \ / // _` || __|| | / _ \ | '_ \ )"<<endl;
@@ -75,39 +75,63 @@ int main() {
     int counter = 0,choice;
     print_banner();
     while(1){
-    // cout<<"\n\n\n\tMENU";
-    cout<<R"(   \\\\\\\\\\\\\\\\\\\)"<<endl;
-    cout<<R"(            MENU        )"<<endl;
-    cout<<R"(    \\\\\\\\\\\\\\\\\\\)"<<endl;
-    cout<<"\n   1. Reservation\n   2. Cancellation\n   3. Show all tickets\n   4. Exit"<<endl;
-    cin>>choice;
-    switch(choice){
-    case 1:
-        t1[counter].reserve_ticket();
-        t1[counter].display();
-        counter++;
-        break;
-    case 2:
-        cin.ignore();
-        cout<<"\nEnter name exactly as in ticket: ";
-        getline(cin, uname);
-        for(int i=0;i<counter;i++){
-           if(t1[i].name==uname){
-           t1[i].cancel_ticket();
-           cout<<"\nTicket cancelled"; 
-           }
-           }
-        break;
-    case 3:
-        for(int j=0;j<counter;j++){
-            t1[j].display();
-        }
-        break;
-    case 4:exit(0);
-    defalt:cout<<"\nWrong Choice";
+        cout<<endl<<endl;
+        cout<<"--------------------------------"<<endl;
+        cout<<R"(  __  __ ______ _   _ _    _  )"<<endl;
+        cout<<R"( |  \/  |  ____| \ | | |  | | )"<<endl;
+        cout<<R"( | \  / | |__  |  \| | |  | | )"<<endl;
+        cout<<R"( | |\/| |  __| | . ` | |  | | )"<<endl;
+        cout<<R"( | |  | | |____| |\  | |__| | )"<<endl;
+        cout<<R"( |_|  |_|______|_| \_|\____/  )"<<endl;
+        cout<<endl;
+        cout<<"\t1. Reservation\n\t2. Cancellation\n\t3. Show all tickets\n\t4. Exit"<<endl<<endl;
+        cout<<"--------------------------------"<<endl;
+        cout<<"\t[+]Your choice:   ";
+        cin>>choice;
+        cout<<"--------------------------------"<<endl;
+        cout<<endl<<endl<<endl<<endl;
+        switch(choice){
+        case 1:
+            cout<<"Welcome to the reserve ticket section!"<<endl;
+            cout<<"Plase enter your details to reserve your ticket"<<endl<<endl;
+            t1[counter].reserve_ticket();
+            cout<<"\n\nYour ticket details: "<<endl;
+            t1[counter].display();
+            counter++;
+            break;
+        case 2:
+            cin.ignore();
+            cout<<"Welcome to the cancel ticket section!"<<endl<<endl;
+            cout<<"\nEnter name exactly as in ticket: ";
+            getline(cin, uname);
+            for(int i=0;i<counter;i++){
+            if(t1[i].name==uname){
+            t1[i].cancel_ticket();
+            cout<<"\nTicket cancelled"; 
+            }
+            }
+            break;
+        case 3:
+            cout<<"All tickets are displayed below!"<<endl<<endl;
+            for(int j=0;j<counter;j++){
+                t1[j].display();
+            }
+            cout<<endl<<endl<<endl<<endl;
+            break;
+        case 4:
+            cout<<endl<<endl<<endl<<endl;
+            cout<<"---------------------------------------------------------------------------------------------------------------------------"<<endl;
+            cout<<"-------------------------------------------THANK YOU FOR VISITING US-------------------------------------------------------"<<endl;
+            cout<<"---------------------------------------------------------------------------------------------------------------------------"<<endl;
+            cout<<"--------------------------------------WE WISH YOU A SAFE AND HAPPY JOURNEY-------------------------------------------------"<<endl;
+            cout<<"---------------------------------------------------------------------------------------------------------------------------"<<endl;
+            exit(0);
+        default:
+            cout<<endl;
+            cout<<"\nWrong Choice. Please input a valid option!";
 
-    
- }
-}
+        
+        }
+    }
 }
 
