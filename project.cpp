@@ -62,24 +62,27 @@ int main() {
     cout<<"\n1.Reservation\n2.Cancellation\n3.Show all tickets\n4.Exit"<<endl;
     cin>>choice;
     switch(choice){
-    case 1:t1[counter].reserve_ticket();
-           t1[counter].display();
-counter++;
-           break;
-    case 2:cin.ignore();
-           cout<<"\nEnter name exactly as in ticket: ";
-           getline(cin, uname);
-           for(int i=0;i<counter;i++){
+    case 1:
+        t1[counter].reserve_ticket();
+        t1[counter].display();
+        counter++;
+        break;
+    case 2:
+        cin.ignore();
+        cout<<"\nEnter name exactly as in ticket: ";
+        getline(cin, uname);
+        for(int i=0;i<counter;i++){
            if(t1[i].name==uname){
            t1[i].cancel_ticket();
            cout<<"\nTicket cancelled"; 
            }
            }
-           break;
-    case 3:for(int j=0;j<counter;j++){
-           t1[j].display();
-           }
-           break;
+        break;
+    case 3:
+        for(int j=0;j<counter;j++){
+            t1[j].display();
+        }
+        break;
     case 4:exit(0);
     defalt:cout<<"\nWrong Choice";
  }
